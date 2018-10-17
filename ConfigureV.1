@@ -1,10 +1,14 @@
 Welcome to Router and Switches Configuration 
 =============================================
+
+
 set clock 
 ============
 enable 
 clock set 12:00:08 14 June 2019 
 show clock 
+
+
 
 line console 0 
 ===============
@@ -15,6 +19,7 @@ login
 exit 
 exit 
 copy run start  
+relod 
 
 
    Hostname 
@@ -22,19 +27,22 @@ copy run start
 enable 
 configure terminal 
 hostname  R1 
+enable password --CISCO ---
 exit 
 exit 
 copy run start 
 
 
 
-
-  line vty 0 4 
+  line vty 0 4                          /*SSH this help other to access the console remotely */
 ===============
-
-
-
-
+enable 
+configure terminal 
+line console 0 4                        /*This allow 5 uses to access remotely */
+password ------CISCO ----
+login  
+exit 
+exit 
 
 
 
