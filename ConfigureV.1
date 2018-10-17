@@ -83,5 +83,28 @@ copy run start
 
 
 
+===========================================Configure Switch ======================================================
+configure terminal 
+line vty 0 15  
+password  ---CISCO --
+login 
+end 
+copy run start 
+
+
+
+
+interface vlan 1
+=================
+configure terminal 
+ip address 192.168.1.240  255.255.255.0
+no shutdown  
+end 
+
+
+
+
+
+
 
 
