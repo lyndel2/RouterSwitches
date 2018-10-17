@@ -59,12 +59,24 @@ Password Encryption
 
 Configure Banner
 ================
-enable 
 configure terminal 
 banner motd #Access to unuathorized user is not allowed !!  System under monitoring #
 exit 
 exit 
 copy run start 
+
+
+
+Configure Router Interface and Ip address 
+========================================
+configure terminal
+interface fastethernol  0/0 
+ip address 192.168.1.1  255.255.255.0 
+no shutdown 
+exit 
+exit
+copy run start 
+
 
 
 
