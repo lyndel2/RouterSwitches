@@ -1,22 +1,30 @@
 Welcome to Router and Switches Configuration 
 =============================================
+set clock 
+============
+enable 
+clock set 12:00:08 14 June 2019 
+show clock 
 
 line console 0 
 ===============
-
-
-
-
-
+enable 
+configure terminal 
+password cisco 
+login 
+exit 
+exit 
+copy run start  
 
 
    Hostname 
 ==============
-
-
-
-
-
+enable 
+configure terminal 
+hostname  R1 
+exit 
+exit 
+copy run start 
 
 
 
@@ -38,7 +46,17 @@ Password Encryption
   
 --service password-encryption           /*This will encryp the line vty 04 password */
 
-banner motd # no unauthorize access  allowed!  System under monitoring #
+
+
+
+Configure Banner
+================
+enable 
+configure terminal 
+banner motd #Access to unuathorized user is not allowed !!  System under monitoring #
+exit 
+exit 
+copy run start 
 
 
 
